@@ -136,14 +136,14 @@ function formatWhatsAppNumber(phone) {
     // Enlever tous les caractères non numériques
     let cleaned = phone.replace(/\D/g, '');
 
-    // Si le numéro commence par 0, remplacer par le code du Burundi (257)
+    // Si le numéro commence par 0, remplacer par le code de la rdc (243)
     if (cleaned.startsWith('0')) {
-        cleaned = '257' + cleaned.substring(1);
+        cleaned = '243' + cleaned.substring(1);
     }
 
     // Si le numéro ne commence pas par 257, ajouter le code
-    if (!cleaned.startsWith('257')) {
-        cleaned = '257' + cleaned;
+    if (!cleaned.startsWith('243')) {
+        cleaned = '243' + cleaned;
     }
 
     return cleaned;
