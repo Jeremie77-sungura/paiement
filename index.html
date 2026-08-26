@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Paiement - Burundi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇧🇮 Paiement Burundi</h1>
+            <p>Paiement simple via WhatsApp</p>
+        </header>
+
+        <!-- Météo Burundi -->
+        <section class="weather-section">
+            <h2>🌤️ Météo Bujumbura</h2>
+            <div id="weather" class="weather-box">
+                <div class="loading">Chargement...</div>
+            </div>
+        </section>
+
+        <!-- Formulaire Paiement -->
+        <section class="payment-section">
+            <h2>💳 Formulaire de Paiement</h2>
+            <form id="paymentForm">
+                <!-- Informations personnelles -->
+                <div class="form-group">
+                    <label for="name">Nom complet *</label>
+                    <input type="text" id="name" name="name" required placeholder="Entrez votre nom">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone WhatsApp *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+257XXXXXXXXX">
+                    </div>
+                </div>
+
+                <!-- Montant et Service -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="amount">Montant (USD) *</label>
+                        <input type="number" id="amount" name="amount" min="1" step="0.01" required placeholder="0.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service/Produit *</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Sélectionner --</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Nourriture">Nourriture</option>
+                            <option value="Logement">Logement</option>
+                            <option value="Santé">Santé</option>
+                            <option value="Éducation">Éducation</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label for="description">Description (optionnel)</label>
+                    <textarea id="description" name="description" rows="3" placeholder="Décrivez votre demande..."></textarea>
+                </div>
+
+                <!-- Conditions -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">J'accepte les conditions d'utilisation</label>
+                </div>
+
+                <!-- Bouton -->
+                <button type="submit" class="btn-whatsapp">
+                    📱 Payer via WhatsApp
+                </button>
+            </form>
+        </section>
+
+        <!-- Info Sécurité -->
+        <section class="info-section">
+            <h3>🔒 Informations</h3>
+            <p>✓ Communication directe via WhatsApp</p>
+            <p>✓ Sans stockage de données bancaires</p>
+            <p>✓ Confirmation instantanée de paiement</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
