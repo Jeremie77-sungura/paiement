@@ -140,12 +140,6 @@ function formatWhatsAppNumber(phone) {
     if (cleaned.startsWith('0')) {
         cleaned = '+243' + cleaned.substring(1);
     }
-
-    // Si le numéro ne commence pas par 257, ajouter le code
-    if (!cleaned.startsWith('+243')) {
-        cleaned = '+243' + cleaned;
-    }
-
     return cleaned;
 }
 
